@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 
+/* 
+primary-color :#131086;
+secondary-color :#b621f3 */
 
-:root {
-    --mdc-theme-primary: #131086;
-    --mdc-theme-secondary: #b621f3;
-  }
 
 *{
     box-sizing: border-box;
@@ -13,6 +12,111 @@
 body{
     padding: 0;
     margin: 0;
-    font-family: "Inter" sans-serif;
-    background: linear-gradient(45deg,--mdc-theme-primary,--mdc-theme-secondary);
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(45deg,#131086,#b621f3);
+    padding: 40px;
+}
+
+
+.container{
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    background-color: #eee;
+}
+
+
+.login-right{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+.login-form{
+    width: 450px;
+}
+.login-form img{
+    width: 20px;
+}
+
+.login-form-content {
+    display: flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+
+.login-header{
+    margin-bottom: 50px;
+}
+
+.login-header h1{
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.login-header p{
+    opacity: .7;
+}
+
+.login-form-footer{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+
+
+.form-item label:not(.chekboxLabel){
+    display: inline-block;
+}
+
+
+input[type='text'],
+input[type='password']{
+    border: 1px solid black;
+    height: 50px;
+    padding: 0 2rem;
+    outline: none;
+    width: 100%;
+    transition: background .5s;
+    font-weight: 18px;
+    border-radius: 100px;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    accent-color: #131086;
+}
+
+button{
+    border: none;
+    background: linear-gradient(45deg , #131086,#b621f3);
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
 }
